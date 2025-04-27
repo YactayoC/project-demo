@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+@layer utilities {
+  .animate-slide-down {
+    animation: slide-down 0.3s ease-out forwards;
+  }
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+
+      opacity: 1;
+    }
+  }
+}
+
+.slick-dots {
+  display: flex !important;
+  justify-content: start;
+  align-items: center;
+  bottom: -40px;
+}
+
+.slick-dots li button:before {
+  color: #ffbe33;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.slick-dots li.slick-active {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffbe33;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
