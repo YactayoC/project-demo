@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-import { links } from "../types/Links";
+import { links } from "../../types/Links";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="py-4 sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center px-20">
+    <nav className="py-4 sticky top-0 z-50 px-5 md:px-32 lg:px-40">
+      <div className="w-full flex justify-between items-center">
         <Link to="/" className="text-3xl font-bold text-white">
           Feane
         </Link>
