@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import { links } from "../../types/Links";
 
@@ -8,7 +8,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="py-4 sticky top-0 z-50 px-5 md:px-32 lg:px-40">
+    <nav className="py-4 sticky top-0 z-50 max-w-[70rem] mx-auto w-full px-10">
       <div className="w-full flex justify-between items-center">
         <Link to="/" className="text-3xl font-bold text-white">
           Feane
@@ -33,13 +33,14 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
-            <XMarkIcon className="w-8 h-8" />
+            <FaTimes className="w-6 h-6" />
           ) : (
-            <Bars3Icon className="w-8 h-8" />
+            <FaBars className="w-6 h-6" />
           )}
         </button>
       </div>
 
+      {/* Mobile Menu Links */}
       <div
         className={`md:hidden transform transition-all duration-300 ease-in-out ${
           menuOpen

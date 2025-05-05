@@ -8,14 +8,14 @@ export default function CustomSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 400000,
+    autoplaySpeed: 3000,
     pausaOnHover: true,
     arrows: false,
     dotsClass: "slick-dots slick-thumb",
   };
 
   return (
-    <div className="w-full h-full flex flex-col justify-center bg-gradient-to-r from-[#0d0e10] to-[#3d4548] px-5 md:px-32 lg:px-40">
+    <div className="w-full h-full flex flex-col justify-center bg-gradient-to-r from-[#0d0e10] to-[#3d4548] max-w-[70rem] mx-auto px-10">
       <Slider {...settings} className="py-10">
         <div className="flex flex-col items-start md:!w-[50%] w-[100%]">
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
